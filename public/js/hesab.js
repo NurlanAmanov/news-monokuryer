@@ -160,8 +160,8 @@ function addInputs(count) {
 
     for (let i = 0; i < count; i++) {
         elaveInputDiv.innerHTML += `
-            <input class="border border-blue-600 p-2 text-xl rounded-xl outline-none" type="text" placeholder="Digər ünvanı daxil edin" class='harayaYeni' />
-            <button type="button" class="btn2 border border-red-600 w-[15%] p-1 text-xl rounded-xl outline-none" onclick="removeInput(this)">Sil</button>
+            <input class="border border-blue-600 p-1 h-[35px] text-xl rounded-xl outline-none" type="text" placeholder="Digər ünvanı daxil edin" class='harayaYeni' />
+            <button type="button" class="btn2 border hover:bg-orange-800 border-orange-600 hover:text-white  w-[15%] p-1 text-xl rounded-xl outline-none" onclick="removeInput(this)">Sil</button>
         `;
     }
 }

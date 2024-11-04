@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <header class='flex shadow-md py-4 px-4 sm:px-10 bg-white font-sans min-h-[75px] tracking-wide relative z-50'>
+    <header class='flex shadow-md py-4 px-4 sm:px-10 bg-[#fff] font-sans min-h-[75px] tracking-wide relative z-50'>
         <div class='flex flex-wrap items-center gap-4 w-full'>
             <a href="javascript:void(0)"><img src="public/assets/gallery/logo2.png" alt="logo" class='w-32' />
             </a>
@@ -42,30 +42,30 @@
                             class='hover:text-[#007bff] text-[#007bff] block font-semibold text-xl'>Ana səhifə
                         </a>
                     </li>
-                    <li class='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
+                    <li class='max-lg:border-b max-lg:py-3 px-3'><a href='public/page/Haqqımızda.htm'
                             class='hover:text-[#007bff] text-black block font-semibold text-xl'>Haqqimizda</a>
                     </li>
-                    <li class='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
+                    <li class='max-lg:border-b max-lg:py-3 px-3'><a href='public/page/partyor.htm'
                             class='hover:text-[#007bff] text-black block font-semibold text-xl'>Partnyorlar
                         </a>
                     </li>
-                    <li class='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
+                    <li class='max-lg:border-b max-lg:py-3 px-3'><a href='public/page/partyor.htm'
                             class='hover:text-[#007bff] text-black block font-semibold text-xl'>Partnyor ol
                         </a>
                     </li>
-                    <li class='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
+                    <li class='max-lg:border-b max-lg:py-3 px-3'><a href='public/page/'
                             class='hover:text-[#007bff] text-black block font-semibold text-xl'>Xidmətlər</a>
                     </li>
-                    <li class='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
+                    <li class='max-lg:border-b max-lg:py-3 px-3'><a href='public/page/Əlaqə.htm'
                             class='hover:text-[#007bff] text-black block font-semibold text-xl'>Əlaqə</a>
                     </li>
                 </ul>
             </div>
 
             <div class='flex ml-auto'>
-                <button
+                <a href="public/page/Kuryerol.htm"
                     class='px-4 py-2 text-[19px] rounded-md font-semibold text-white border-2 border-[#007bff] bg-[#007bff] hover:bg-[#004bff]'>Kuryer
-                    ol</button>
+                    ol</a>
 
                 <div id="toggleOpen" class='flex ml-auto lg:hidden'>
                     <button class='ml-6'>
@@ -81,7 +81,7 @@
 
     </header>
     <main>
-        <section class="info-top p-5 lg:p-0">
+        <section class="info-top p-4 lg:p-0">
             <div class="max-w-[100%] max-md:max-w-xl mx-auto  my-4 flex p-2 lg:flex-row flex-col px-4">
                 <div class="text-center lg:w-[50%] mx-auto">
                     <h2 class="text-gray-800 text-2xl font-extrabold text-start mb-6">Kuryer Kalkulyatoru nədir? və
@@ -111,9 +111,9 @@
                 </div>
 
              
-                <form class="max-w-lg mt-4 lg:mt-0 lg:w-[80%] mb-12 mx-auto h-full" onsubmit="handleSubmit(event)">
+                <form class="max-w-lg mt-4 lg:mt-0 lg:w-[80%] mb-12 mx-auto h-full shadow-lg p-4 rounded-xl shadow-slate-700" onsubmit="handleSubmit(event)">
                     <div class="mb-3">
-                        <h1 class="text-blue-500 md:text-3xl text-2xl font-extrabold max-md:text-center">
+                        <h1 class="text-blue-500 md:text-xl text-center mt-4 text-xl font-extrabold max-md:text-center">
                             MonoKuryer Kalkulyatoru </h1>
                     </div>
                     <div class="filyal py-3">
@@ -138,16 +138,17 @@
 
                         </div>
 
-                        <p class="py-4 text-xl font-semibold">İkinci ünvan əlavə etmək istəyirsiniz? <button
+                        <p class="py-4 text-xl font-semibold">İkinci ünvan əlavə etmək istəyirsiniz? 
+                           <button
                                 type="button" onclick="addInputs(1)"
-                                class="bg-blue-600  hover:bg-blue-700 text-white p-2 btn rounded-md mt-2"
+                                class="bg-blue-600  hover:bg-blue-700 text-white p-1 h-[35px] mx-1 btn rounded-md mt-2"
                                 disabled>Əlavə et</button></p>
                         <div id="elaveInput"></div>
                     </div>
                     <div class="mt-6">
                         <label class="text-gray-800 text-2xl font-semibold block mb-2">Haraya ?</label>
                         <div class="relative flex items-center">
-                            <select id="category" class="w-[80%] text-xl border border-blue-600" onchange="selectCategory()" disabled>
+                            <select id="category" class="w-[80%] text-xl  p-1 border rounded-md border-blue-600" onchange="selectCategory()" disabled>
                                 <option value="" disabled selected>Seçin</option>
                             </select>
                         </div>
@@ -175,7 +176,7 @@
                                 <input type="text" id="additionalAddress" disabled />
                             </label>
                         </div>
-                        <select id="secim" class="hidden border border-blue-600 text-xl my-3 w-[60%]"  disabled>
+                        <select id="secim" class="hidden border rounded-md p-1 mt-2 border-blue-600 text-xl my-3 w-[60%]"  disabled>
                             <option value="" class="border border-blue-600 text-xl my-3"  disabled selected>Seçin</option>
                         </select>
                         <div>
@@ -186,13 +187,13 @@
                     </div>
                     <div class="mt-6">
                         <span class="text-xl font-semibold">Məhsulun növü</span>
-                        <select id="productType" disabled class="w-[80%] text-xl border border-blue-500">
+                        <select id="productType" disabled class="w-[80%] text-xl mt-2 p-1 border rounded-md border-blue-500">
                             <option value="" disabled selected>Seçin</option>
                         </select>
                     </div>
                     <div class="mt-6">
                         <p class="text-xl font-semibold">Ödəniş növü</p>
-                        <select id="paymentType" onchange="payment()" class="w-[80%] text-xl border border-blue-500" disabled>
+                        <select id="paymentType" onchange="payment()" class="w-[80%] mt-2 rounded-md p-1 text-xl border border-blue-500" disabled>
                             <option value="" disabled selected>Seçin</option>
                             <option value="cash">Nağd</option>
                             <option value="online">Kart</option>
@@ -203,7 +204,7 @@
                     </div>
                     <div class="kuryer-sec py-2">
                         <p  class="text-xl font-semibold">Kuryer seçimi</p>
-                        <select id="kuryerType" onchange="selectKuryer()"class="w-[80%] text-xl border border-blue-500"  disabled>
+                        <select id="kuryerType" onchange="selectKuryer()"class="w-[80%] p-1 rounded-md mt-2 text-xl border border-blue-500"  disabled>
                             <option value="" disabled selected>Seçin</option>
                             <option value="xanim">Xanım kuryer</option>
                             <option value="bey">Bəy kuryer</option>
@@ -211,7 +212,7 @@
                     </div>
                     <div class="catdirilma-vaxti py-3">
                         <p class="text-xl font-semibold">Çatdırılma vaxtı</p>
-                        <select id="catdirilmaGun" class="w-[80%] text-xl border border-blue-500" onchange="selectCatdirilmaGun()" disabled>
+                        <select id="catdirilmaGun" class="w-[80%] text-xl border p-1 rounded-md mt-2 border-blue-500" onchange="selectCatdirilmaGun()" disabled>
                             <option value="" disabled selected>Günü seçin</option>
                             <option value="Bazar-ertəsi">Bazar ertəsi</option>
                             <option value="Çərşənbə-axşamı">Çərşənbə axşamı</option>
@@ -221,7 +222,7 @@
                             <option value="Şənbə">Şənbə</option>
                             <option value="Bazar">Bazar</option>
                         </select>
-                        <select id="catdirilmaSaat" class="w-[80%] mt-5 text-xl border border-blue-500" onchange="selectCatdirilmaSaat()" disabled>
+                        <select id="catdirilmaSaat" class="w-[80%] mt-5 text-xl border p-1 rounded-md border-blue-500" onchange="selectCatdirilmaSaat()" disabled>
                             <option value="" disabled selected>Saati seçin</option>
                             <option value="09:00-10:00">09:00-10:00</option>
                             <option value="10:00-11:00">10:00-11:00</option>
@@ -240,11 +241,11 @@
                             <input type="text" id="additionalProductInfoInput" disabled />
                         </label>
                     </div>
-                    <label class="sertler text-[17px] font-semibold mt-3 ">
-                        <input type="checkbox" class="w-5 h-5 my-2 mx-2" id="agreement"  />
+                    <label class="sertler text-[14px] font-semibold mt-3 ">
+                        <input type="checkbox" class="w-4 h-4 my-2 mx-2" id="agreement"  />
                         Mən, müqavilənin şərtlərini oxumuşam və razıyam. Daşınma üçün qadağan olunmuş əşyaların siyahısını oxudum, və razıyam.
                     </label>
-                    <input type="submit" id="gonder" value="Göndər" class="bg-blue-600 w-[20%] p-2 mt-4 text-white rounded-xl font-semibold hover:bg-blue-900" disabled>
+                    <input type="submit" id="gonder" value="Göndər" class="bg-blue-600 w-[25%] p-2 mt-4 text-white rounded-xl font-semibold hover:bg-blue-900" disabled>
                
                 </form>
             </div>
@@ -262,7 +263,7 @@
         </div>
   
         <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-8 mt-12 max-md:max-w-lg mx-auto">
-          <div class="bg-white text-left border border-gray-300 rounded-md p-6 hover:shadow-md transition-all">
+          <div class="bg-white text-left border border-gray-300 rounded-md p-6 hover:shadow-md hover:bg-[#FFA726] transition-all">
             <img src="public/assets/icons/letter.svg" class="w-20 mb-2 object-cover" alt="Zərf (məktub) çatdırılma">
             <h3 class="text-gray-800 text-xl font-semibold mb-3">Zərf (məktub) çatdırılma</h3>
             <p class="text-gray-600 text-xl">MonoKuryer.az - xəbər gətirir. Korporativ müştərilər üçün zərf və məktubların çatdırılması xidməti təklif edirik.</p>
@@ -271,7 +272,7 @@
             </button>
           </div>
   
-          <div class="bg-white text-left border border-gray-300 rounded-md p-6 hover:shadow-md transition-all">
+          <div class="bg-white text-left border border-gray-300 rounded-md p-6  hover:bg-[#FFA726] hover:shadow-md transition-all">
             <img src="public/assets/icons/jewelry-store-svgrepo-com.svg"  class="w-20 mb-2 object-cover" alt="Zinət əşyaları">
             <h3 class="text-gray-800 text-xl font-semibold mb-3">Zinət əşyalarının çatdırılması</h3>
             <p class="text-gray-600 text-xl">MonoKuryer.az - dəyər gətirir. Bəzək və zinət əşyalarını Bakının istənilən nöqtəsinə çatdırır..</p>
@@ -280,7 +281,7 @@
             </button>
           </div>
   
-          <div class="bg-white text-left border border-gray-300 rounded-md p-6 hover:shadow-md transition-all">
+          <div class="bg-white text-left border border-gray-300  hover:bg-[#FFA726] rounded-md p-6 hover:shadow-md transition-all">
            <img src="public/assets/icons/market-basket-svgrepo-com.svg"  class="w-20 mb-2 object-cover" alt="Mağazalardan çatdırılma">
             <h3 class="text-gray-800 text-xl font-semibold mb-3">Mağazalardan çatdırılma</h3>
             <p class="text-gray-600 text-xl">MonoKuryer.az - mağazadan birbaşa qapına! Mağazalardan ünvana çatdırılmada MonoKuryer.az sifariş edərək vaxta və enerjiyə qənaət etmək olar..</p>
@@ -289,7 +290,7 @@
             </button>
           </div>
   
-          <div class="bg-white text-left border border-gray-300 rounded-md p-6 hover:shadow-md transition-all">
+          <div class="bg-white text-left border border-gray-300 hover:bg-[#FFA726]  rounded-md p-6 hover:shadow-md transition-all">
            <img src="public/assets/icons/buket.svg" class="w-20 mb-2 object-cover"  alt="Gül buketlərini">
             <h3 class="text-gray-800 text-xl font-semibold mb-3">Gül buketlərinin çatdırılması</h3>
             <p class="text-gray-600 text-xl">MonoKuryer.az - sevgi çatdırır. Təravətli və gözəl ətirli çiçəklərdən yığılan gül buketlərini vaxtında istənilən ünvana təhvil verir..</p>
@@ -298,9 +299,9 @@
             </button>
           </div>
   
-          <div class="bg-white text-left border border-gray-300 rounded-md p-6 hover:shadow-md transition-all">
+          <div class="bg-white text-left border border-gray-300  hover:bg-[#FFA726]  rounded-md p-6 hover:shadow-md transition-all">
            <img src="public/assets/icons/gifts-svgrepo-com.svg"  class="w-20 mb-2 object-cover" alt="Hədiyyələr">
-            <h3 class="text-gray-800 text-xl font-semibold mb-3">Hədiyyələrin çatdırılması</h3>
+            <h3 class="text-gray-800 text-xl  font-semibold mb-3">Hədiyyələrin çatdırılması</h3>
             <p class="text-gray-600 text-xl">MonoKuryer.az - kiçik sürprizlər gətirir. Sevdiklərinizə ən qısa zamanda hədiyyə paketlərinin (maksimum 40x40) çatdırılmasını həyata keçirir.</p>
             <button type="button" class="border border-gray-300 text-gray-800 px-4 py-2 rounded-md font-semibold flex items-center text-sm mt-6 hover:bg-gray-50">
               Daha çoxu <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" class="rotate-90 ml-1.5"><path fill="#333" d="M12.006 1a1 1 0 0 1 .838.463l7 11a1 1 0 0 1-.985 1.527l-3.364-.48a.434.434 0 0 0-.495.43V20c0 1.645-1.355 3-3 3s-3-1.355-3-3v-6.06a.434.434 0 0 0-.495-.43l-3.364.48a1 1 0 0 1-.985-1.527l7-11a1 1 0 0 1 .85-.463z" data-original="#000000" paint-order="fill markers stroke"></path></svg>
@@ -391,7 +392,7 @@
       </div>
 </section>
 
-<section class="partyorlar ">
+<section class="partyorlar mb-12 ">
     <h2 class="text-3xl font-bold text-center my-5">Bizimlə Partnyorlar</h2>
    <div class="silder-container overflow-hidden px-12">
     <div class="slider">

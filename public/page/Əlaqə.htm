@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link href="src/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../src/stylee.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>MonoKuryer.az | Sürətli və Etibarlı Çatdırılma Xidməti</title>
+</head>
+
+<body>
+    <header class='flex shadow-md py-4 px-4 xl:px-10 bg-[#fff] font-sans min-h-[75px] tracking-wide relative z-50'>
+        <div class='flex flex-wrap items-center gap-4 w-full'>
+            <a href="../../index.htm"><img src="../assets/gallery/logo2.png" alt="logo" class='w-32' />
+            </a>
+
+            <div id="collapseMenu"
+                class='lg:ml-16 max-lg:hidden lg:!block max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-40 max-lg:before:inset-0 max-lg:before:z-50'>
+                <button id="toggleClose" class='lg:hidden fixed top-2 right-4 z-[100] rounded-full bg-white p-3'>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 fill-black" viewBox="0 0 320.591 320.591">
+                        <path
+                            d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
+                            data-original="#000000"></path>
+                        <path
+                            d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
+                            data-original="#000000"></path>
+                    </svg>
+                </button>
+
+                <ul
+                    class='lg:flex lg:gap-x-4 max-lg:space-y-3 max-lg:fixed  max-lg:bg-white max-lg:w-2/3 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-4 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50'>
+                    <li class='max-lg:border-b max-lg:pb-4 px-3 lg:hidden'>
+                        <a href="../../index.htm"><img src="../assets/gallery/logo2.png" alt="logo"
+                                class='w-32' />
+                        </a>
+                    </li>
+                    <li class='max-lg:border-b max-lg:py-3 px-3'>
+                        <a href='../../index.htm'
+                            class='hover:text-[#007bff] text-[#007bff] block font-semibold text-xl'>Ana səhifə
+                        </a>
+                    </li>
+                    <li class='max-lg:border-b max-lg:py-3 px-3'><a href='Haqqımızda.htm'
+                            class='hover:text-[#007bff] text-black block font-semibold text-xl'>Haqqimizda</a>
+                    </li>
+                    <li class='max-lg:border-b max-lg:py-3 px-3'><a href='partyor.htm'
+                            class='hover:text-[#007bff] text-black block font-semibold text-xl'>Partnyorlar
+                        </a>
+                    </li>
+                    <li class='max-lg:border-b max-lg:py-3 px-3'><a href='partyor.htm'
+                            class='hover:text-[#007bff] text-black block font-semibold text-xl'>Partnyor ol
+                        </a>
+                    </li>
+                    <li class='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
+                            class='hover:text-[#007bff] text-black block font-semibold text-xl'>Xidmətlər</a>
+                    </li>
+                    <li class='max-lg:border-b max-lg:py-3 px-3'><a href='partyor.htm'
+                            class='hover:text-[#007bff] text-black block font-semibold text-xl'>Əlaqə</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class='flex ml-auto'>
+                <a href="Kuryerol.htm"
+                    class='px-4 py-2 text-[19px] rounded-md font-semibold text-white border-2 border-[#007bff] bg-[#007bff] hover:bg-[#004bff]'>Kuryer
+                    ol</a>
+
+                <div id="toggleOpen" class='flex ml-auto lg:hidden'>
+                    <button class='ml-6'>
+                        <svg class="w-7 h-7" fill="#000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <main>
+
+      <div class=" mx-auto p-4">
+        <div class="bg-white shadow-slate-300 rounded p-8">
+          <h2 class="text-3xl text-gray-800 font-extrabold text-center mb-12">Əlaqə</h2>
+  
+          <div class="grid lg:grid-cols-2 items-start gap-12">
+            <form class="space-y-3 text-gray-800">
+              <input type='text' placeholder='Ad,Soyad'
+                class="w-full bg-gray-100 rounded py-3 px-6 text-sm focus:bg-transparent focus:outline-blue-600" />
+              <input type='email' placeholder='Email'
+                class="w-full bg-gray-100 rounded py-3 px-6 text-sm focus:bg-transparent focus:outline-blue-600" />
+              <input type='email' placeholder='Əlaqə nömrəsi.'
+                class="w-full bg-gray-100 rounded py-3 px-6 text-sm focus:bg-transparent focus:outline-blue-600" />
+              <textarea placeholder='Message' rows="6"
+                class="w-full bg-gray-100 rounded px-6 text-sm pt-3 focus:bg-transparent focus:outline-blue-600"></textarea>
+              <button type='button'
+                class="text-white bg-blue-600 hover:bg-blue-700 rounded text-sm px-6 py-3 !mt-6">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill='currentColor' class="mr-2 inline" viewBox="0 0 548.244 548.244">
+                  <path fill-rule="evenodd" d="M392.19 156.054 211.268 281.667 22.032 218.58C8.823 214.168-.076 201.775 0 187.852c.077-13.923 9.078-26.24 22.338-30.498L506.15 1.549c11.5-3.697 24.123-.663 32.666 7.88 8.542 8.543 11.577 21.165 7.879 32.666L390.89 525.906c-4.258 13.26-16.575 22.261-30.498 22.338-13.923.076-26.316-8.823-30.728-22.032l-63.393-190.153z" clip-rule="evenodd" data-original="#000000" />
+                </svg>
+               Mesaj göndər
+              </button>
+            </form>
+  
+            <div class="grid sm:grid-cols-2  gap-12">
+              <div class="flex items-start bg-white">
+                <div class="shadow-[0_0px_2px_0px_rgba(6,81,237,0.3)] rounded px-3 py-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 fill-blue-600" viewBox="0 0 512 512">
+                    <path d="M341.476 338.285c54.483-85.493 47.634-74.827 49.204-77.056C410.516 233.251 421 200.322 421 166 421 74.98 347.139 0 256 0 165.158 0 91 74.832 91 166c0 34.3 10.704 68.091 31.19 96.446l48.332 75.84C118.847 346.227 31 369.892 31 422c0 18.995 12.398 46.065 71.462 67.159C143.704 503.888 198.231 512 256 512c108.025 0 225-30.472 225-90 0-52.117-87.744-75.757-139.524-83.715zm-194.227-92.34a15.57 15.57 0 0 0-.517-.758C129.685 221.735 121 193.941 121 166c0-75.018 60.406-136 135-136 74.439 0 135 61.009 135 136 0 27.986-8.521 54.837-24.646 77.671-1.445 1.906 6.094-9.806-110.354 172.918L147.249 245.945zM256 482c-117.994 0-195-34.683-195-60 0-17.016 39.568-44.995 127.248-55.901l55.102 86.463a14.998 14.998 0 0 0 25.298 0l55.101-86.463C411.431 377.005 451 404.984 451 422c0 25.102-76.313 60-195 60z" data-original="#000000"></path>
+                    <path d="M256 91c-41.355 0-75 33.645-75 75s33.645 75 75 75 75-33.645 75-75-33.645-75-75-75zm0 120c-24.813 0-45-20.187-45-45s20.187-45 45-45 45 20.187 45 45-20.187 45-45 45z" data-original="#000000"></path>
+                  </svg>
+                </div>
+                <div class="ml-6">
+                  <h4 class="text-gray-800 text-base font-bold">Iş saatları</h4>
+                  <p class="text-sm text-gray-500 mt-1"> 10:00 - 20:00</p>
+                </div>
+              </div>
+  
+              <div class="flex items-start bg-white">
+                <div class="shadow-[0_0px_2px_0px_rgba(6,81,237,0.3)] rounded px-3 py-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 fill-blue-600" viewBox="0 0 473.806 473.806">
+                    <path d="M374.456 293.506c-9.7-10.1-21.4-15.5-33.8-15.5-12.3 0-24.1 5.3-34.2 15.4l-31.6 31.5c-2.6-1.4-5.2-2.7-7.7-4-3.6-1.8-7-3.5-9.9-5.3-29.6-18.8-56.5-43.3-82.3-75-12.5-15.8-20.9-29.1-27-42.6 8.2-7.5 15.8-15.3 23.2-22.8 2.8-2.8 5.6-5.7 8.4-8.5 21-21 21-48.2 0-69.2l-27.3-27.3c-3.1-3.1-6.3-6.3-9.3-9.5-6-6.2-12.3-12.6-18.8-18.6-9.7-9.6-21.3-14.7-33.5-14.7s-24 5.1-34 14.7l-.2.2-34 34.3c-12.8 12.8-20.1 28.4-21.7 46.5-2.4 29.2 6.2 56.4 12.8 74.2 16.2 43.7 40.4 84.2 76.5 127.6 43.8 52.3 96.5 93.6 156.7 122.7 23 10.9 53.7 23.8 88 26 2.1.1 4.3.2 6.3.2 23.1 0 42.5-8.3 57.7-24.8.1-.2.3-.3.4-.5 5.2-6.3 11.2-12 17.5-18.1 4.3-4.1 8.7-8.4 13-12.9 9.9-10.3 15.1-22.3 15.1-34.6 0-12.4-5.3-24.3-15.4-34.3l-54.9-55.1zm35.8 105.3c-.1 0-.1.1 0 0-3.9 4.2-7.9 8-12.2 12.2-6.5 6.2-13.1 12.7-19.3 20-10.1 10.8-22 15.9-37.6 15.9-1.5 0-3.1 0-4.6-.1-29.7-1.9-57.3-13.5-78-23.4-56.6-27.4-106.3-66.3-147.6-115.6-34.1-41.1-56.9-79.1-72-119.9-9.3-24.9-12.7-44.3-11.2-62.6 1-11.7 5.5-21.4 13.8-29.7l34.1-34.1c4.9-4.6 10.1-7.1 15.2-7.1 6.3 0 11.4 3.8 14.6 7l.3.3c6.1 5.7 11.9 11.6 18 17.9 3.1 3.2 6.3 6.4 9.5 9.7l27.3 27.3c10.6 10.6 10.6 20.4 0 31-2.9 2.9-5.7 5.8-8.6 8.6-8.4 8.6-16.4 16.6-25.1 24.4-.2.2-.4.3-.5.5-8.6 8.6-7 17-5.2 22.7l.3.9c7.1 17.2 17.1 33.4 32.3 52.7l.1.1c27.6 34 56.7 60.5 88.8 80.8 4.1 2.6 8.3 4.7 12.3 6.7 3.6 1.8 7 3.5 9.9 5.3.4.2.8.5 1.2.7 3.4 1.7 6.6 2.5 9.9 2.5 8.3 0 13.5-5.2 15.2-6.9l34.2-34.2c3.4-3.4 8.8-7.5 15.1-7.5 6.2 0 11.3 3.9 14.4 7.3l.2.2 55.1 55.1c10.3 10.2 10.3 20.7.1 31.3zm-154.2-286.1c26.2 4.4 50 16.8 69 35.8s31.3 42.8 35.8 69c1.1 6.6 6.8 11.2 13.3 11.2.8 0 1.5-.1 2.3-.2 7.4-1.2 12.3-8.2 11.1-15.6-5.4-31.7-20.4-60.6-43.3-83.5s-51.8-37.9-83.5-43.3c-7.4-1.2-14.3 3.7-15.6 11s3.5 14.4 10.9 15.6zm217.2 96.3c-8.9-52.2-33.5-99.7-71.3-137.5s-85.3-62.4-137.5-71.3c-7.3-1.3-14.2 3.7-15.5 11-1.2 7.4 3.7 14.3 11.1 15.6 46.6 7.9 89.1 30 122.9 63.7 33.8 33.8 55.8 76.3 63.7 122.9 1.1 6.6 6.8 11.2 13.3 11.2.8 0 1.5-.1 2.3-.2 7.3-1.1 12.3-8.1 11-15.4z" data-original="#000000"></path>
+                  </svg>
+                </div>
+                <div class="ml-6">
+                  <h4 class="text-gray-800 text-base font-bold">Telefon</h4>
+                  <a  class="text-md text-gray-500 mt-1"> +994 55 301 06 01</a>
+                </div>
+              </div>
+  
+              <div class="flex items-start bg-white">
+                <div class="shadow-[0_0px_2px_0px_rgba(6,81,237,0.3)] rounded px-3 py-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 fill-blue-600" viewBox="0 0 32 32">
+                    <path d="M8 30a1.001 1.001 0 0 1-1-1v-5H4c-1.654 0-3-1.346-3-3V5c0-1.654 1.346-3 3-3h24c1.654 0 3 1.346 3 3v16c0 1.654-1.346 3-3 3H15.851l-7.226 5.781A.998.998 0 0 1 8 30zM4 4c-.552 0-1 .449-1 1v16c0 .551.448 1 1 1h4a1 1 0 0 1 1 1v3.92l5.875-4.701A1 1 0 0 1 15.5 22H28c.552 0 1-.449 1-1V5c0-.551-.448-1-1-1z" data-original="#000000"></path>
+                    <path d="M24 12H8a1 1 0 1 1 0-2h16a1 1 0 1 1 0 2zm-8 4H8a1 1 0 1 1 0-2h8a1 1 0 1 1 0 2z" data-original="#000000"></path>
+                  </svg>
+                </div>
+                <div class="ml-6">
+                  <h4 class="text-gray-800 text-base font-bold">E-mail</h4>
+                  <p class="text-md text-gray-500 mt-1">Monokuryer.az@gmail.com</p>
+                </div>
+              </div>
+  
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+    <footer class="font-sans tracking-wide bg-[#213343] py-10 px-10">
+        <div class="grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div>
+            <h4 class="text-[#FFA726] font-semibold text-lg mb-6">Faydalı linklər</h4>
+            <ul class="space-y-5">
+              <li>
+                <a href="javascript:void(0)" class="hover:text-[#FFA726] text-gray-300 text-[19px] transition-all">Ana səhifə</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="hover:text-[#FFA726] text-gray-300 text-[19px] transition-all">Haqqımızda</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="hover:text-[#FFA726] text-gray-300 text-[19px] transition-all">Partnyorlar</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="hover:text-[#FFA726] text-gray-300 text-[19px] transition-all">Xidmətlər</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="hover:text-[#FFA726] text-gray-300 text-[19px] transition-all">Əlaqə</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="hover:text-[#FFA726] text-gray-300 text-[19px] transition-all">Kuryer ol</a>
+              </li>
+            </ul>
+          </div>
+  
+          <div>
+            <h4 class="text-[#FFA726] font-semibold text-lg mb-6">Bunu bilməlisiniz</h4>
+            <ul class="space-y-5">
+              <li>
+                <a href="javascript:void(0)" class="hover:text-[#FFA726] text-gray-300 text-[19px] transition-all">İstifadəçi razılaşması</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="hover:text-[#FFA726] text-gray-300 text-[19px] transition-all">Daşınması qadağan olan məhsullar
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+  
+          <div>
+            <h4 class="text-[#FFA726] font-semibold text-lg mb-6">Bizi sosial şəbəkələrdə izləyin
+            </h4>
+            <ul class="flex items-center justify-start gap-6">
+              <li>
+                <a href="https://www.instagram.com/monokuryerrr/?utm_source=qr&igsh=MWl3cXloY2lpcXZidw%3D%3D" class="hover:text-[#FFA726] text-gray-300 text-[35px] transition-all"><i class="fa-brands fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="https://www.tiktok.com/@monokuryer.az?_t=8orNTnC6Buc&_r=1" class="hover:text-[#FFA726] text-gray-300 text-[30px] transition-all"><i
+                    class="fa-brands fa-tiktok"></i></a>
+              </li>
+              
+              <li>
+                <a  href="https://wa.me/994553010601" class="hover:text-[#FFA726] text-gray-300 text-[30px] transition-all"><i class="fa-brands fa-whatsapp"></i></a>
+              </li>
+            </ul>
+          </div>
+  
+          <div>
+            <h4 class="text-[#FFA726] font-semibold text-lg mb-6">Əlaqə</h4>
+            <ul class="space-y-5">
+             
+              <li>
+                <a href="mailto:Monokuryer.az@gmail.com" class="hover:text-[#FFA726] text-gray-300 text-[19px] transition-all">Monokuryer.az@gmail.com</a>
+              </li>
+              <li>
+                <a  href="tel:+994553010601" class="hover:text-[#FFA726] text-gray-300 text-[19px] transition-all">(055) 301 06 01</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="border-t text-center border-[#6b5f5f] pt-8 mt-8">
+          <p class="text-gray-300 text-[19px]">
+            © 2024 Copyright: Monokuryer.az
+          </p>
+        </div>
+      </footer>
+  
+    <script src="../js/menu.js"></script>
+    <script src="../js/partyor.js"></script>
+</body>
+
+</html>
