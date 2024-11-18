@@ -125,12 +125,11 @@ function showFields(filialName, isBakiFlag) {
     if (filialHeader) filialHeader.textContent = filialName + " Filialı";
     resetValues(); // Filial seçildikdə dəyərləri sıfırla
     getAllProductType(); // Məhsul növlərini yeniləyin
-    
+
     const secim = document.getElementById("secim");
     secim.innerHTML = ""; // Seçimləri sıfırla
 
     if (isBakiFlag) {
-        // Bakı üçün seçimlər
         document.getElementById("category").innerHTML = `
             <option value="" disabled selected>Seçin</option>
             <option value="baku">Şəhər ətrafı</option>
@@ -141,7 +140,6 @@ function showFields(filialName, isBakiFlag) {
             <option value="expres">Kargo xidməti</option>
         `;
     } else {
-        // Sumqayıt üçün seçimlər
         document.getElementById("category").innerHTML = `
             <option value="" disabled selected>Seçin</option>
             <option value="city">Şəhər daxili (Sumqayıt)</option>
@@ -153,53 +151,108 @@ function showFields(filialName, isBakiFlag) {
     }
 }
 
-// İkinci ünvan əlavə etmək üçün funksiya
-function addInputs(count) {
-    const elaveInputDiv = document.getElementById("elaveInput");
-    elaveInputDiv.innerHTML = ""; // Mövcud girişləri təmizləyin
+// Kateqoriya seçildikdə dəyəri göstərmək
+function selectCategory() {
+    const category = document.getElementById("category").value;
+    const secim = document.getElementById("secim");
+    secim.innerHTML = ""; // Seçimləri sıfırla
 
-    for (let i = 0; i < count; i++) {
-        elaveInputDiv.innerHTML += `
-            <input class="border border-blue-600 p-1 h-[35px] text-xl rounded-xl outline-none" type="text" placeholder="Digər ünvanı daxil edin" class='harayaYeni' />
-            <button type="button" class="btn2 border hover:bg-orange-800 border-orange-600 hover:text-white  w-[15%] p-1 text-xl rounded-xl outline-none" onclick="removeInput(this)">Sil</button>
-        `;
+    if (category === "baku") {
+        bakiSeherleri.forEach(item => {
+            secim.innerHTML += `<option value="${item}">${item}</option>`;
+        });
+        secim.style.display = "block";
+        document.getElementById("txtarea").style.display = "block";
+        document.getElementById("additionalInfo").style.display = "none";
+    } else if (category === "metro") {
+        metrolar.forEach(item => {
+            secim.innerHTML += `<option value="${item}">${item}</option>`;
+        });
+        secim.style.display = "block";
+        document.getElementById("txtarea").style.display = "none";
+        document.getElementById("additionalInfo").style.display = "none";
+    } else if (category === "absheron") {
+        const abseronList = document.getElementById("filialHeader").textContent.includes("Bakı") ? bakiAbseronRayonlari : sumqayitAbseronRayonlari;
+        abseronList.forEach(item => {
+            secim.innerHTML += `<option value="${item}">${item}</option>`;
+        });
+        secim.style.display = "block";
+        document.getElementById("txtarea").style.display = "block";
+        document.getElementById("additionalInfo").style.display = "none";
+    } else if (category === "poct" || category === "expres") {
+        document.getElementById("additionalInfo").style.display = "block";
+        document.getElementById("txtarea").style.display = "none";
+        secim.style.display = "none";
+    } else {
+        secim.style.display = "none";
     }
 }
 
-// İkinci ünvanı silmək üçün funksiya
-function removeInput(element) {
-    element.previousElementSibling.remove();
-    element.remove();
+// İkinci ünvan əlavə etmək üçün funksiya
+function addInputs(count) {
+    const elaveInputDiv = document.getElementById("elaveInput");
+    for (let i = 0; i < count; i++) {
+        elaveInputDiv.innerHTML += `
+            <div class="flex gap-2 items-center">
+                <input type="text" placeholder="Digər ünvanı daxil edin" class="w-full p-2 border rounded" />
+                <button type="button" onclick="removeInput(this)" class="bg-red-500 text-white px-2 py-1 rounded">Sil</button>
+            </div>`;
+    }
+}
+
+// Ünvanı silmək
+function removeInput(button) {
+    button.parentElement.remove();
 }
 
 // Form məlumatlarını toplamaq və WhatsApp ilə göndərmək
 function handleSubmit(event) {
     event.preventDefault();
 
-    const category = document.getElementById("category")?.value || ''; // Elementi yoxlayın
-    const ad = document.getElementById("ad")?.value || ''; // Elementi yoxlayın
-    const soyad = document.getElementById("soyad")?.value || ''; // Elementi yoxlayın
-    const telefon = document.getElementById("telefon")?.value || ''; // Burada telefon id doğru olmalıdır
-    const haraya = document.getElementById("haraya")?.value || ''; // Elementi yoxlayın
-    const productType = document.getElementById("productType")?.value || ''; // Elementi yoxlayın
-    const kuryerType = document.getElementById("kuryerType")?.value || ''; // Elementi yoxlayın
-    const catdirilmaGun = document.getElementById("catdirilmaGun")?.value || ''; // Elementi yoxlayın
-    const catdirilmaSaat = document.getElementById("catdirilmaSaat")?.value || ''; // Elementi yoxlayın
-    const agreementChecked = document.getElementById("agreement")?.checked || false; // Checkbox yoxlayın
+    // Form elementlərinin ID-ləri ilə seçilməsi
+    const ad = document.getElementById("musad")?.value.trim() || "";
+    const soyad = document.getElementById("mussoyad")?.value.trim() || "";
+    const telefon = document.getElementById("musnom")?.value.trim() || "";
+    const haraya = document.getElementById("haraya")?.value.trim() || "";
+    const category = document.getElementById("category")?.value.trim() || "";
+    const selectedSecim = document.getElementById("secim")?.value.trim() || "";
+    const productType = document.getElementById("productType")?.value.trim() || "";
+    const paymentType = document.getElementById("paymentType")?.value.trim() || "";
+    const kuryerType = document.getElementById("kuryerType")?.value.trim() || "";
+    const catdirilmaGun = document.getElementById("catdirilmaGun")?.value.trim() || "";
+    const catdirilmaSaat = document.getElementById("catdirilmaSaat")?.value.trim() || "";
+    const additionalProductInfo = document.getElementById("additionalProductInfoInput")?.value.trim() || "";
 
+    // İkinci ünvanları toplamaq
+    const additionalAddresses = Array.from(document.querySelectorAll("#elaveInput input"))
+        .map(input => input.value.trim())
+        .filter(value => value !== "");
 
-    const message = `
-        Ad: ${ad}
-        Soyad: ${soyad}
-        Telefon: ${telefon}
-        Haraya: ${haraya}
-        Məhsul növü: ${productType}
-        Kuryer: ${kuryerType}
-        Çatdırılma Günü: ${catdirilmaGun}
-        Çatdırılma Saati: ${catdirilmaSaat}
-    `;
+    // Mesaj yaratmaq
+    let message = "Sifariş məlumatları:";
 
-    const encodedMessage = encodeURIComponent(message.trim());
-    const whatsappURL = `https://wa.me/994553010601?text=${encodedMessage}`;
-    window.open(whatsappURL, '_blank');
+    if (ad) message += `Ad: ${ad}`;
+    if (soyad) message += `Soyad: ${soyad}`;
+    if (telefon) message += `Telefon: ${telefon}`;
+    if (haraya) message += `Haradan: ${haraya}`;
+    if (category) message += `Seçilən ünvan: ${category}`;
+    if (selectedSecim) message += `Seçim: ${selectedSecim}`;
+    if (additionalAddresses.length) message += `Əlavə ünvanlar: ${additionalAddresses.join(", ")}`;
+    if (productType) message += `Məhsul növü: ${productType}`;
+    if (paymentType) message += `Ödəniş növü: ${paymentType}`;
+    if (kuryerType) message += `Kuryer seçimi: ${kuryerType}`;
+    if (catdirilmaGun) message += `Çatdırılma günü: ${catdirilmaGun}`;
+    if (catdirilmaSaat) message += `Çatdırılma saatı: ${catdirilmaSaat}`;
+    if (additionalProductInfo) message += `Əlavə məlumat: ${additionalProductInfo}`;
+
+    // Boş mesaj yoxlanışı
+    if (message === "Sifariş məlumatları:") {
+        alert("Zəhmət olmasa formu doldurun.");
+        return;
+    }
+
+    // WhatsApp linkini yaratmaq və açmaq
+    const whatsappURL = `https://wa.me/994553010601?text=${encodeURIComponent(message.trim())}`;
+    window.open(whatsappURL, "_blank");
 }
+

@@ -12,9 +12,9 @@
 </head>
 
 <body>
-    <header class='flex shadow-md py-4 px-4 sm:px-10 bg-[#fff] font-sans min-h-[75px] tracking-wide relative z-50'>
+    <header class='flex shadow-md py-1 px-4 sm:px-10 bg-[#fff] h-[100px] tracking-wide relative w-full  z-50'>
         <div class='flex flex-wrap items-center gap-4 w-full'>
-            <a href="javascript:void(0)"><img src="public/assets/gallery/logo2.png" alt="logo" class='w-32' />
+            <a href="javascript:void(0)"><img src="public/assets/gallery/logo2.png" alt="logo" class='w-[95px] object-cover' />
             </a>
 
             <div id="collapseMenu"
@@ -49,14 +49,14 @@
                             class='hover:text-[#007bff] text-black block font-semibold text-xl'>Partnyorlar
                         </a>
                     </li>
-                    <li class='max-lg:border-b max-lg:py-3 px-3'><a href='public/page/partyor.htm'
+                    <li class='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
                             class='hover:text-[#007bff] text-black block font-semibold text-xl'>Partnyor ol
                         </a>
                     </li>
                     <li class='max-lg:border-b max-lg:py-3 px-3'><a href='public/page/'
                             class='hover:text-[#007bff] text-black block font-semibold text-xl'>Xidmətlər</a>
                     </li>
-                    <li class='max-lg:border-b max-lg:py-3 px-3'><a href='public/page/Əlaqə.htm'
+                    <li class='max-lg:border-b max-lg:py-3 px-3'><a href='public/page/Elaqe.htm'
                             class='hover:text-[#007bff] text-black block font-semibold text-xl'>Əlaqə</a>
                     </li>
                 </ul>
@@ -117,7 +117,7 @@
                             MonoKuryer Kalkulyatoru </h1>
                     </div>
                     <div class="filyal py-3">
-                        <h3 class="text-2xl font-semibold" id="filialHeader">Filyal seç</h3>
+                        <h3 class="text-2xl text-center font-semibold" id="filialHeader">Filyal seç</h3>
                         <div class="filyallar flex items-center justify-center gap-3">
                             <button type="button" id="baki"
                                 class="w-[32%] mt-3   text-xl  tracking-wider font-semibold rounded-md bg-blue-600 hover:bg-blue-700 text-white focus:outline-none">
@@ -133,7 +133,7 @@
                         <label class="text-gray-800 text-2xl font-semibold block mb-2">Hardan?</label>
                         <div class="relative flex items-center">
                             <input name="name" type="text" required  id="haraya"
-                                class="w-full bg-transparent text-md border-b border-gray-300 focus:border-blue-500 px-2 py-3 outline-none"
+                                class="w-full bg-transparent text-md border-b border-black focus:border-blue-500 px-2 py-3 outline-none"
                                 placeholder="Ünvanı  bura daxil edin" />
 
                         </div>
@@ -145,6 +145,21 @@
                                 disabled>Əlavə et</button></p>
                         <div id="elaveInput"></div>
                     </div>
+<div class="info-musderi">
+  <label class="mb-3">
+    Ad:<br />
+    <input class="border w-full px-2 border-black mb-4 p-1 rounded-md" type="text" id="musad" disabled />
+</label>
+<label>
+  Soyad:<br />
+  <input class="border w-full px-2 border-black mb-4 p-1 rounded-md" type="text" id="mussoyad" disabled />
+</label>
+<label>
+  Əlaqə nömrəsi:<br />
+  <input class="border w-full px-2 border-black p-1 rounded-md" type="text" id="musnom" disabled />
+</label>
+</div>
+
                     <div class="mt-6">
                         <label class="text-gray-800 text-2xl font-semibold block mb-2">Haraya ?</label>
                         <div class="relative flex items-center">
@@ -155,25 +170,25 @@
                         <div id="additionalInfo" style="display: none;">
                             <label>
                                 Ad:<br />
-                                <input type="text" id="ad" disabled />
+                                <input class="border w-full px-2 border-black p-1 rounded-sm" type="text" id="ad" disabled />
                             </label>
                             <br />
                             <label>
                                 Soyad:<br />
-                                <input type="text" id="soyad" disabled />
+                                <input type="text" id="soyad"  class="border w-full px-2 border-black p-1 rounded-sm" disabled />
                             </label>
                             <br />
                             <label>
                                 Ata Adı:<br />
-                                <input type="text" id="additionalAddress" disabled />
+                                <input type="text" id="additionalAddress"  class="border w-full px-2 border-black p-1 rounded-sm" disabled />
                             </label>
                             <label>
                                 Rayon və ya şəhər (dəqiq ünvan)<br />
-                                <input type="text" id="additionalAddress" disabled />
+                                <input type="text" id="additionalAddress"  class="border w-full px-2 border-black p-1 rounded-sm" disabled />
                             </label>
                             <label>
                                 Əlaqə nömrəsi:<br />
-                                <input type="text" id="additionalAddress" disabled />
+                                <input type="text" id="additionalAddress"  class="border w-full px-2 border-black p-1 rounded-sm" disabled />
                             </label>
                         </div>
                         <select id="secim" class="hidden border rounded-md p-1 mt-2 border-blue-600 text-xl my-3 w-[60%]"  disabled>
@@ -198,8 +213,8 @@
                             <option value="cash">Nağd</option>
                             <option value="online">Kart</option>
                         </select>
-                        <div id="cardInput" style="display: none;">
-                            <span>Sifarişin təsdiq olunması üçün zəhmət olmasa verilən karta ödəniş edib çeki WhatsApp üzərindən göndərin</span>
+                        <div id="cardInput" class="my-4" style="display: none;">
+                            <span class="text-xl font-semibold ">Sifarişin təsdiq olunması üçün zəhmət olmasa verilən karta ödəniş edib çeki WhatsApp üzərindən göndərin</span>
                         </div>
                     </div>
                     <div class="kuryer-sec py-2">
@@ -235,10 +250,10 @@
                             <option value="17:00-18:00">17:00-18:00</option>
                         </select>
                     </div>
-                    <div id="additionalProductInfo" style="display: none;">
-                        <label>
+                    <div id="additionalProductInfo"  class="py-3">
+                        <label class="text-xl font-semibold">
                             Məhsul haqqında əlavə məlumat:<br />
-                            <input type="text" id="additionalProductInfoInput" disabled />
+                            <textarea  id="additionalProductInfoInput" class="border-black my-3 p-1 border rounded-sm w-full"></textarea>
                         </label>
                     </div>
                     <label class="sertler text-[14px] font-semibold mt-3 ">
@@ -426,22 +441,22 @@
             <h4 class="text-[#FFA726] font-semibold text-lg mb-6">Faydalı linklər</h4>
             <ul class="space-y-5">
               <li>
-                <a href="javascript:void(0)" class="hover:text-[#FFA726] text-gray-300 text-[19px] transition-all">Ana səhifə</a>
+                <a href="index.htm" class="hover:text-[#FFA726] text-gray-300 text-[19px] transition-all">Ana səhifə</a>
               </li>
               <li>
-                <a href="javascript:void(0)" class="hover:text-[#FFA726] text-gray-300 text-[19px] transition-all">Haqqımızda</a>
+                <a href="public/page/Haqqımızda.htm" class="hover:text-[#FFA726] text-gray-300 text-[19px] transition-all">Haqqımızda</a>
               </li>
               <li>
-                <a href="javascript:void(0)" class="hover:text-[#FFA726] text-gray-300 text-[19px] transition-all">Partnyorlar</a>
+                <a href="public/page/partyor.htm" class="hover:text-[#FFA726] text-gray-300 text-[19px] transition-all">Partnyorlar</a>
               </li>
               <li>
-                <a href="javascript:void(0)" class="hover:text-[#FFA726] text-gray-300 text-[19px] transition-all">Xidmətlər</a>
+                <a href="public/page/Haqqımızda.htm" class="hover:text-[#FFA726] text-gray-300 text-[19px] transition-all">Xidmətlər</a>
               </li>
               <li>
-                <a href="javascript:void(0)" class="hover:text-[#FFA726] text-gray-300 text-[19px] transition-all">Əlaqə</a>
+                <a href="public/page/Elaqe.htm" class="hover:text-[#FFA726] text-gray-300 text-[19px] transition-all">Əlaqə</a>
               </li>
               <li>
-                <a href="javascript:void(0)" class="hover:text-[#FFA726] text-gray-300 text-[19px] transition-all">Kuryer ol</a>
+                <a href="public/page/Kuryerol.htm" class="hover:text-[#FFA726] text-gray-300 text-[19px] transition-all">Kuryer ol</a>
               </li>
             </ul>
           </div>
@@ -450,10 +465,10 @@
             <h4 class="text-[#FFA726] font-semibold text-lg mb-6">Bunu bilməlisiniz</h4>
             <ul class="space-y-5">
               <li>
-                <a href="javascript:void(0)" class="hover:text-[#FFA726] text-gray-300 text-[19px] transition-all">İstifadəçi razılaşması</a>
+                <a href="public/page/İstifadəçirazılaşması.htm" class="hover:text-[#FFA726] text-gray-300 text-[19px] transition-all">İstifadəçi razılaşması</a>
               </li>
               <li>
-                <a href="javascript:void(0)" class="hover:text-[#FFA726] text-gray-300 text-[19px] transition-all">Daşınması qadağan olan məhsullar
+                <a href="public/page/Daşınmasıqadağanolanməhsullar.htm" class="hover:text-[#FFA726] text-gray-300 text-[19px] transition-all">Daşınması qadağan olan məhsullar
                 </a>
               </li>
               
@@ -500,6 +515,17 @@
       </footer>
     <script src="public/js/hesab.js"></script>
     <script src="public/js/menu.js"></script>
+    <script type="text/javascript">
+      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+      (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/66c0ee020cca4f8a7a7729ca/1i5gq3edh';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+      })();
+      </script>
 </body>
 
 </html>
