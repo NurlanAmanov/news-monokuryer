@@ -13,6 +13,7 @@ document.getElementById('myForm').addEventListener('submit', function(event) {
     const idNumber = document.getElementById('idNumber').value;
     const finCode = document.getElementById('finCode').value;
     const experience = document.getElementById('tecrube').value;
+    const Cinsiyyet = document.getElementById('Cinsiyyet').value;
     const message = document.getElementById('message').value;
 
     // Şərtlərlə razı olub olmadığını yoxlayırıq
@@ -37,6 +38,7 @@ document.getElementById('myForm').addEventListener('submit', function(event) {
         *Ş/V seriya nömrəsi:* ${idNumber}\n
         *Ş/V Fin kodu:* ${finCode}\n
         *Təcrübə:* ${experience}\n
+        *Cinsiyyət:* ${Cinsiyyet}\n
         *Əlavə Məlumat:* ${message}
     `;
 
